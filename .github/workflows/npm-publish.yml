@@ -37,5 +37,10 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Debug npm identity
+        run: |
+          npm config get registry
+          npm whoami
+
       - name: Publish package
         run: npm publish --access public --provenance
