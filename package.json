@@ -1,0 +1,16 @@
+{
+  "name": "renovate-shared-utils",
+  "version": "0.1.0",
+  "description": "Shared helpers for renovate dependency tests",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "test": "node -e \"import('./index.js').then(m=>console.log(m.getPackageLabel()))\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module"
+}
