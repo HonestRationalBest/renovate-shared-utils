@@ -1,8 +1,11 @@
 {
   "name": "renovate-shared-utils",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Shared helpers for renovate dependency tests",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "exports": {
     ".": "./index.js"
   },
@@ -10,7 +13,18 @@
     "test": "node -e \"import('./index.js').then(m=>console.log(m.getPackageLabel()))\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Pavel Korshun",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HonestRationalBest/renovate-shared-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HonestRationalBest/renovate-shared-utils/issues"
+  },
+  "homepage": "https://github.com/HonestRationalBest/renovate-shared-utils#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }

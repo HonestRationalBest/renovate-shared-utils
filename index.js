@@ -1,4 +1,4 @@
-export const SHARED_PACKAGE_VERSION = '0.2.0'
+export const SHARED_PACKAGE_VERSION = '0.2.1'
 
 export function getPackageLabel() {
   return `renovate-shared-utils@${SHARED_PACKAGE_VERSION}`
