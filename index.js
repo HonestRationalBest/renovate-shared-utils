@@ -1,7 +1,7 @@
-export const SHARED_PACKAGE_VERSION = '0.2.2'
+export const SHARED_PACKAGE_VERSION = '0.2.3'
 
 export function getPackageLabel() {
-  return `renovate-shared-utils@${SHARED_PACKAGE_VERSION}`
+  return `@korshundeveloper/renovate-shared-utils@${SHARED_PACKAGE_VERSION}`
 }
 
 export function makeBadge(appName) {

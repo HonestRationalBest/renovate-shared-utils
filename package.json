@@ -1,6 +1,6 @@
 {
-  "name": "renovate-shared-utils",
-  "version": "0.2.2",
+  "name": "@korshundeveloper/renovate-shared-utils",
+  "version": "0.2.3",
   "description": "Shared helpers for renovate dependency tests",
   "main": "index.js",
   "files": [
