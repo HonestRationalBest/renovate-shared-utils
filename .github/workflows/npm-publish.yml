@@ -12,6 +12,8 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - name: Checkout
@@ -22,11 +24,18 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
+          always-auth: true
+
+      - name: Configure npm auth
+        run: |
+          if [ -z "${NODE_AUTH_TOKEN}" ]; then
+            echo "NPM_TOKEN is missing. Add repository secret NPM_TOKEN."
+            exit 1
+          fi
+          printf "//registry.npmjs.org/:_authToken=%s\n" "${NODE_AUTH_TOKEN}" > "${HOME}/.npmrc"
 
       - name: Run tests
         run: npm test
 
       - name: Publish package
         run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
